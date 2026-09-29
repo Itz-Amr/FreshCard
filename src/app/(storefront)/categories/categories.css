@@ -1,0 +1,254 @@
+.categories-page {
+  background: #f9fafb80;
+  min-height: 100vh;
+}
+.categories-hero {
+  color: white;
+  background: linear-gradient(to bottom right, #16a34a, #22c55e, #4ade80);
+}
+.categories-hero > .app-container {
+  padding-block: 64px;
+}
+.categories-hero nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+.categories-hero nav a {
+  color: #ffffffb3;
+}
+.categories-hero nav > span:first-of-type {
+  color: #ffffff66;
+}
+.categories-hero-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.categories-hero-icon {
+  flex: 0 0 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: #ffffff33;
+  backdrop-filter: blur(4px);
+  box-shadow:
+    0 0 0 1px #ffffff4d,
+    0 20px 25px -5px #0000001a,
+    0 8px 10px -6px #0000001a;
+}
+.categories-hero-icon img {
+  width: 37.5px;
+  height: 30px;
+}
+.categories-hero h1 {
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: -0.9px;
+  font-weight: 700;
+}
+.categories-hero p {
+  margin-top: 4px;
+  color: #ffffffcc;
+  font-size: 16px;
+  line-height: 24px;
+}
+.categories-content {
+  padding-block: 40px;
+}
+.taxonomy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+.taxonomy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #f3f4f6;
+  border-radius: 16px;
+  background: white;
+  box-shadow: var(--shadow);
+  transition:
+    transform 180ms,
+    border-color 180ms,
+    box-shadow 180ms;
+}
+.taxonomy-entry {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.taxonomy-entry .taxonomy-card {
+  flex: 1;
+}
+.taxonomy-subcategories-link {
+  display: block;
+  padding: 12px 4px;
+  color: var(--primary);
+  text-align: center;
+  font-size: 14px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.taxonomy-subcategories-link[aria-current="page"] {
+  font-weight: 700;
+}
+.taxonomy-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+.taxonomy-image img {
+  object-fit: cover;
+}
+.taxonomy-card h2 {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #101828;
+  overflow-wrap: anywhere;
+}
+.taxonomy-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--primary);
+  opacity: 0;
+  transition: opacity 180ms;
+}
+.taxonomy-card-action img {
+  width: 12.5px;
+  height: 10px;
+}
+.taxonomy-card:hover,
+.taxonomy-card:focus-visible,
+.taxonomy-card[aria-current="true"] {
+  transform: translateY(-4px);
+  border-color: #bbf7d0;
+  box-shadow:
+    0 10px 15px -3px #0000001a,
+    0 4px 6px -4px #0000001a;
+}
+.taxonomy-card:hover h2,
+.taxonomy-card:focus-visible h2,
+.taxonomy-card[aria-current="true"] h2 {
+  color: var(--primary);
+}
+.taxonomy-card:hover .taxonomy-card-action,
+.taxonomy-card:focus-visible .taxonomy-card-action,
+.taxonomy-card[aria-current="true"] .taxonomy-card-action {
+  opacity: 1;
+}
+.taxonomy-loading {
+  aspect-ratio: 0.81;
+  border-radius: 16px;
+}
+.categories-message {
+  padding: 48px 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  text-align: center;
+}
+.categories-message h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.categories-message p {
+  margin: 12px 0 24px;
+  color: var(--muted);
+}
+.subcategories-panel {
+  margin-top: 32px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: white;
+  scroll-margin-top: 24px;
+}
+.subcategories-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.subcategories-heading h2 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+}
+.subcategories-heading a {
+  color: var(--primary);
+}
+.subcategories-panel ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.subcategories-panel li {
+  border-radius: 8px;
+  background: #f0fdf4;
+  color: #166534;
+}
+.subcategories-panel li a {
+  display: block;
+  padding: 10px 16px;
+  border-radius: inherit;
+}
+.subcategories-panel li a:hover {
+  background: #dcfce7;
+}
+.subcategories-panel p {
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+@media (max-width: 767px) {
+  .taxonomy-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+  .taxonomy-card {
+    padding: 16px;
+  }
+}
+@media (max-width: 600px) {
+  .categories-hero > .app-container {
+    padding-block: 48px;
+  }
+  .categories-hero h1 {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: -0.75px;
+  }
+  .categories-hero-icon {
+    flex-basis: 54.59px;
+  }
+  .categories-hero-title > div {
+    min-width: 0;
+  }
+  .taxonomy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .storefront-layout:has(.categories-page) .benefits-compact .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
